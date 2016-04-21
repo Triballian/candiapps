@@ -44,27 +44,20 @@ def getconf(name):
     
     envars = {}
    
-
     for line in cfile:
         
 
         marker = '#'
 
-        
-
         crline = line.partition(marker)[0].strip().replace('\\', '/')
         crline = sub(r'[C|c]:|/$', '', crline)
         
         #print('this is the line: crline ' + crline)
-        
-
-
 
         if not crline:
             continue
 
         # check to see if the line has a comment. using regular experssions
-        
         
         line = crline.strip()
         #print('this is the line:' + str(line))
@@ -80,6 +73,6 @@ def getconf(name):
         
 
 
-#     return envars
+    return envars
 
 # envars = getconf('/Users/Noe/workspace/stakenanny/candiapps/test/test')
