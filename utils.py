@@ -1,3 +1,7 @@
+"""
+Library used to parse the type of configuration files associated with crypto currencies.
+These files are tipically called ini files.
+"""
 '''
 The MIT License (MIT)
 
@@ -30,6 +34,10 @@ Created on Apr 16, 2016
 from re import sub
 
 def getconf(name):
+    """ 
+        Pass in the string name of the configuration file to be parsed into your envrionment.
+        Returns dict called envars.
+    """
     # grab the env from jvim.conf
     cname = name
     cfile = open(cname + '.conf')
