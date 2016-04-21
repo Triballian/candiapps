@@ -55,7 +55,7 @@ def getconf(name):
         crline = line.partition(marker)[0].strip().replace('\\', '/')
         crline = sub(r'[C|c]:|/$', '', crline)
         
-        print('this is the line: crline ' + crline)
+        #print('this is the line: crline ' + crline)
         
 
 
@@ -74,12 +74,12 @@ def getconf(name):
         cdata = line.split('=')
         
         #print('this is the line: cdata[1] ' + str(cdata[1]))
-        print('this is the line:' + str(line))
+        #print('this is the line:' + str(line))
         envars[str(cdata[0].lower())] = sub('\[|\]|\'', '' , str(cdata[1].lstrip().split(',')))
         
         
 
 
-    return envars
+#     return envars
 
-envars = getconf('/Users/Noe/workspace/stakenanny/candiapps/test/test')
+# envars = getconf('/Users/Noe/workspace/stakenanny/candiapps/test/test')
